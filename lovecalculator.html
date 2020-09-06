@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href ="love.css" rel="stylesheet" type="text/css">
+    <title>Love Calculator</title>
+</head>
+<body>
+    <header>
+        <div class="card w-50 m-auto text-center">
+            <div class="card-header">LOVE CALCULATOR</div>
+            <div class="card-body">
+                <form class="form-inline w-75 m-auto">
+                    <div class="form-group">
+                        <input type="text" name="" class="form-control" text-align="center" placeholder="Your Name" id="name" >
+                    </div>
+                    <div> <span class="pl-4 pr-4"> + </span></div>
+                    <div class="form-group">
+                        <input type="text" name=""  class="form-control" text-align="center" placeholder="Love Name" id="lname">
+                    </div>
+                </form>
+                <div class="w-75 m-auto"><br><br>
+                    <button id="btn" class="btn w-50" onclick="check()">click</button>
+                </div>
+                <br>
+                <input type="text" name="" id="value" class="form-control" placeholder="percentage" text-align="center" magin="auto">
+            </div>
+            <div id="footer" class="card-footer">God Bless You</div>
+        </div>
+    </header>
+    <script>
+        function check(){
+        var name = document.getElementById('name').value;
+        var lname = document.getElementById('lname').value;
+
+        if(name==""){
+            alert('Please enter your name');
+        }else if(name.length<=2){
+            alert('Please enter valid name');
+        }else if(lname==""){
+            alert('Please enter your love name');
+        }else if(lname.length<=2){
+            alert('Please enter valid love name');
+        }else{
+            var love= Math.random()*100;
+            love = Math.floor(love);
+            document.getElementById('value').value = love +"%";
+        }
+    }
+    </script>
+</body>
+</html>
